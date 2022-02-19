@@ -3,7 +3,7 @@ class MyHeader extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = `<a class="logo-link" href="index.html">
+        this.innerHTML = `<a class="logo-link" href="index.html" aria-label="go to the home page">
         <div class="logo-container"><svg class="logo" viewBox="0 0 48 48" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -27,12 +27,12 @@ class MyHeader extends HTMLElement {
             </svg></div>
         <!-- navbar  -->
         <ul class="navbar">
-            <li class="nav-item ${this.getAttribute("homeActive")}"><a href="index.html" class="nav-link"><span
+            <li class="nav-item ${this.getAttribute("homeActive")}"><a href="index.html" aria-label="go to the home page" class="nav-link"><span
                         class="nav-link-num">00</span>Home</a>
             </li>
-            <li class="nav-item ${this.getAttribute("destinationActive")}"><a href="destination.html" class="nav-link"><span class="nav-link-num">01</span>Destination</a></li>
-            <li class="nav-item ${this.getAttribute("crewActive")}"><a href="crew.html" class="nav-link"><span class="nav-link-num">02</span>Crew</a></li>
-            <li class="nav-item ${this.getAttribute("technologyActive")}"><a href="technology.html" class="nav-link"><span class="nav-link-num">03</span>Technology</a></li>
+            <li class="nav-item ${this.getAttribute("destinationActive")}"><a href="destination.html" aria-label="go to the destination page" class="nav-link"><span class="nav-link-num">01</span>Destination</a></li>
+            <li class="nav-item ${this.getAttribute("crewActive")}"><a href="crew.html" aria-label="go to the crew page" class="nav-link"><span class="nav-link-num">02</span>Crew</a></li>
+            <li class="nav-item ${this.getAttribute("technologyActive")}"><a href="technology.html" aria-label="go to the technology page" class="nav-link"><span class="nav-link-num">03</span>Technology</a></li>
         </ul>
     </div>
     <!-- hamburger icon  -->
