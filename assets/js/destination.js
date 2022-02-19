@@ -10,7 +10,7 @@ $(document).ready(() => {
         $(`#${clickedId}`).click(e => {
             $(".planet-nav-tab-item").not(e.target).removeClass("active-planet-link");
             $(e.target).addClass("active-planet-link");
-            $.get("https://github.com/Ishan-Sanjaya/space-tourism-website/blob/main/data.json", data => {
+            $.get("https://my-json-server.typicode.com/Ishan-Sanjaya/space-tourism-data/db", data => {
                 planetName.text(data.destinations[jsonIndex].name);
                 planetImage.attr("src", data.destinations[jsonIndex].images.webp);
                 planetDescription.text(data.destinations[jsonIndex].description);

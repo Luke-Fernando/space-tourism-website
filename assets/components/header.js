@@ -45,4 +45,3 @@ class MyHeader extends HTMLElement {
 };
 
 customElements.define("my-header", MyHeader);
-console.log($(".header").html());

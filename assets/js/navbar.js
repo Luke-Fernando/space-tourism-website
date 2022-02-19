@@ -1,5 +1,4 @@
 $(document).ready(() => {
-    console.log($(document).width());
 
     const navbar = $(".navbar-container");
     const navbarCloseBtn = $(".res-navbar-close-btn");
@@ -13,6 +12,5 @@ $(document).ready(() => {
         navbar.css("right", "-500px");
     })
 
-    console.log($(".header").html());
 
 })

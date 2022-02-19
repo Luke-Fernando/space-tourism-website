@@ -9,8 +9,7 @@ $(document).ready(() => {
     techNavBtnGuard.click(e => {
         $(e.target).parent().addClass("tech-nav-btn-active");
         techNavBtnGuard.not(e.target).parent().removeClass("tech-nav-btn-active");
-        console.log($(e.target).index(".tech-nav-btn-guard"));
-        $.get("https://github.com/Ishan-Sanjaya/space-tourism-website/blob/main/data.json", data => {
+        $.get("https://my-json-server.typicode.com/Ishan-Sanjaya/space-tourism-data/db", data => {
             techTopic.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].name);
             techPara.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].description);
             if ($(window).width() > 815) {
@@ -22,7 +21,6 @@ $(document).ready(() => {
     });
     $(window).resize(() => {
         if ($(window).width() < 815) {
-            console.log("OK");
             techImg.attr("src", "./assets/technology/image-launch-vehicle-landscape.jpg")
         } else {
             techImg.attr("src", "./assets/technology/image-launch-vehicle-portrait.jpg")
