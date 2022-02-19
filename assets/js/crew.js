@@ -9,7 +9,7 @@ $(document).ready(() => {
         crewNavBtn.not(e.target).removeClass("crew-active");
         $(e.target).addClass("crew-active");
 
-        $.get("https://my-json-server.typicode.com/Ishan-Sanjaya/space-tourism-data/db", data => {
+        $.get("https://competent-ptolemy-d4ab42.netlify.app/db.json", data => {
             profesion.text(data.crew[crewNavBtn.index(e.target)].role);
             crewMemName.text(data.crew[crewNavBtn.index(e.target)].name);
             crewMemDetails.text(data.crew[crewNavBtn.index(e.target)].bio);

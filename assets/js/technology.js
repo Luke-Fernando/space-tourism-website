@@ -9,7 +9,7 @@ $(document).ready(() => {
     techNavBtnGuard.click(e => {
         $(e.target).parent().addClass("tech-nav-btn-active");
         techNavBtnGuard.not(e.target).parent().removeClass("tech-nav-btn-active");
-        $.get("https://my-json-server.typicode.com/Ishan-Sanjaya/space-tourism-data/db", data => {
+        $.get("https://competent-ptolemy-d4ab42.netlify.app/db.json", data => {
             techTopic.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].name);
             techPara.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].description);
             if ($(window).width() > 815) {
