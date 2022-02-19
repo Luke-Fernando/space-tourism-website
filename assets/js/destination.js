@@ -1,5 +1,4 @@
 $(document).ready(() => {
-    console.log("destination");
 
     const planetName = $(".planet-name");
     const planetImage = $(".planet-image");
@@ -11,13 +10,12 @@ $(document).ready(() => {
         $(`#${clickedId}`).click(e => {
             $(".planet-nav-tab-item").not(e.target).removeClass("active-planet-link");
             $(e.target).addClass("active-planet-link");
-            $.get("../data.json", data => {
+            $.get("https://github.com/Ishan-Sanjaya/space-tourism-website/blob/main/data.json", data => {
                 planetName.text(data.destinations[jsonIndex].name);
                 planetImage.attr("src", data.destinations[jsonIndex].images.webp);
                 planetDescription.text(data.destinations[jsonIndex].description);
                 planetDistance.text(data.destinations[jsonIndex].distance);
                 planetTravelTime.text(data.destinations[jsonIndex].travel);
-                console.log(data.destinations[jsonIndex]);
             })
         })
     };
