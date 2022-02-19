@@ -47,6 +47,11 @@
   transition: all 300ms ease-in-out;
 }
 
+@supports (-moz-appearance: none) {
+  .navbar-container {
+    background-color: #1b304d;
+  }
+}
 .navbar {
   max-width: 542px;
   width: 100%;
