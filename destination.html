@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/profile-pic.png">
+  <link rel="stylesheet" type="text/css" href="./assets/css/destination_page_style/destination.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/header_style/header.css">
+
+  <!-- javascripts  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/components/header.js"></script>
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/destination.js"></script>
+
+
+  <title>Frontend Mentor | Space tourism website | Ishan Sanjaya</title>
+</head>
+
+<body id="body">
+
+
+  <div class="container">
+    <!-- header  -->
+    <my-header class="header" homeActive="" destinationActive="active-nav-link" crewActive="" technologyActive="">
+    </my-header>
+
+    <main class="main-content-container">
+      <div class="destination-topic-container">
+        <h2 class="destination-topic"><span class="step-num">01</span>Pick your destination</h2>
+      </div>
+      <div class="palnet-all-details-container">
+        <div class="planet-image-container"><img class="planet-image" src="./assets/destination/image-moon.webp"
+            alt="moon">
+          <div class="picture-guard"></div>
+        </div>
+        <div class="planet-details-container">
+          <!-- planet navigation tab  -->
+          <div class="planet-navigation-tab-container">
+            <div class="planet-nav-tab">
+              <p id="moon" class="planet-nav-tab-item active-planet-link">Moon</p>
+              <p id="mars" class="planet-nav-tab-item">Mars</p>
+              <p id="europa" class="planet-nav-tab-item">Europa</p>
+              <p id="titan" class="planet-nav-tab-item">Titan</p>
+            </div>
+          </div>
+          <!-- planet name  -->
+          <div class="planet-name-container">
+            <p class="planet-name">Moon</p>
+          </div>
+          <!-- planet details paragraph  -->
+          <div class="planet-details-paragraph-container">
+            <p class="planet-details-paragraph">See our planet as you’ve never seen it before. A perfect relaxing trip
+              away to help
+              regain perspective and come back refreshed. While you’re there, take in some history
+              by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          </div>
+          <div class="divider-line"></div>
+          <!-- planet numeric details  -->
+          <div class="planet-numeric-details-container">
+            <div class="distance-continer numeric-card-container">
+              <p class="distance-text numeric-card-text">Avg. distance</p>
+              <p class="avg-distance numeric-card-number">384,400 km</p>
+            </div>
+            <div class="travel-time-continer numeric-card-container">
+              <p class="travel-time-text numeric-card-text">Est. travel time</p>
+              <p class="travel-time numeric-card-number">3 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html>

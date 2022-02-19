@@ -1,0 +1,85 @@
+.crew-main-topic-container {
+  grid-column: 1/10;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.crew-text-details-container {
+  grid-row: 6/17;
+  grid-column: 1/12;
+}
+.crew-person-image-container {
+  grid-row: 2/21;
+  grid-column: 11/21;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+}
+.crew-topic {
+  font-family: $barlow-cond;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.crew-topic-num {
+  padding-right: 2rem;
+  color: hsla(0, 0%, 100%, 0.253);
+  font-weight: 700;
+}
+.crew-person-image {
+  max-width: 568px;
+}
+.profesion {
+  font-family: $bellefair;
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+  padding: 0;
+}
+.crew-member-name {
+  font-family: $bellefair;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0;
+}
+.crew-member-details {
+  font-family: $barlow;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+
+  padding: 0 10rem 0 0;
+}
+.crew-nav-container {
+  grid-column: 1/4;
+  grid-row: 17/18;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.crew-nav-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.17;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.crew-active {
+  background-color: #ffffff;
+  opacity: 1;
+}

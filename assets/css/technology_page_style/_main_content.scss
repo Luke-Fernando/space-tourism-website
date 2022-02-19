@@ -1,0 +1,128 @@
+.main-content-container {
+  width: 100%;
+  height: 85vh;
+  max-height: 750px;
+  min-height: 700px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: grid;
+  grid-template-columns: repeat(27, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+}
+.main-topic-container {
+  grid-column: 4/28;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-topic {
+  font-family: $barlow-cond;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 4.725px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+.topic-num {
+  margin-right: 1rem;
+  font-weight: 700;
+  opacity: 0.25;
+}
+.tech-details-container {
+  grid-column: 4/16;
+  grid-row: 7/19;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tech-image-container {
+  grid-column: 18/28;
+  grid-row: 3/23;
+  display: flex;
+  justify-content: flex-end;
+}
+.tech-image {
+  width: 100%;
+}
+.tech-nav-btns-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: max-content;
+  height: 85%;
+}
+.tech-nav-btn {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    border: 1px solid rgb(255, 255, 255);
+  }
+}
+.tech-nav-btn-guard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: transparent;
+}
+.tech-nav-btn-active {
+  background-color: $white;
+  .tech-nav-btn-text {
+    color: $black;
+  }
+}
+.tech-nav-btn-text {
+  font-family: $bellefair;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  transition: all 300ms ease-in-out;
+}
+.tech-details-texts-container {
+  height: 85%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tech-details-sub-topic {
+  font-family: $barlow-cond;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  margin: 0;
+}
+.tech-details-topic {
+  font-family: $bellefair;
+  font-weight: 400;
+  font-size: 56px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.tech-details-para {
+  font-family: $barlow;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+  margin: 0;
+}
