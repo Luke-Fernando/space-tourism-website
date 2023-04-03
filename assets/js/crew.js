@@ -6,7 +6,7 @@ $(document).ready(() => {
   const crewBtn4 = $("#fourth-crew-member-btn");
   const crewTexts = $(".crew-texts-margin");
   const crewPerson = $(".crew-person-margin");
-
+  //
   function changePerson(crewBtn, marginChange) {
     crewBtn.click(function () {
       $(this).addClass("crew-active");
