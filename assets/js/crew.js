@@ -1,19 +1,25 @@
 $(document).ready(() => {
-    const crewNavBtn = $(".crew-nav-btn");
-    const profesion = $(".profesion");
-    const crewMemName = $(".crew-member-name");
-    const crewMemDetails = $(".crew-member-details");
-    const crewPerImg = $(".crew-person-image");
+  const crewBtns = $(".crew-nav-btn");
+  const crewBtn1 = $("#first-crew-member-btn");
+  const crewBtn2 = $("#second-crew-member-btn");
+  const crewBtn3 = $("#third-crew-member-btn");
+  const crewBtn4 = $("#fourth-crew-member-btn");
+  const crewTexts = $(".crew-texts-margin");
+  const crewPerson = $(".crew-person-margin");
 
-    crewNavBtn.click(e => {
-        crewNavBtn.not(e.target).removeClass("crew-active");
-        $(e.target).addClass("crew-active");
+  function changePerson(crewBtn, marginChange) {
+    crewBtn.click(function () {
+      $(this).addClass("crew-active");
+      crewBtns.not(this).each(function () {
+        $(this).removeClass("crew-active");
+      });
+      crewTexts.css("margin-left", marginChange);
+      crewPerson.css("margin-left", marginChange);
+    });
+  }
 
-        $.get("https://competent-ptolemy-d4ab42.netlify.app/db.json", data => {
-            profesion.text(data.crew[crewNavBtn.index(e.target)].role);
-            crewMemName.text(data.crew[crewNavBtn.index(e.target)].name);
-            crewMemDetails.text(data.crew[crewNavBtn.index(e.target)].bio);
-            crewPerImg.attr("src", data.crew[crewNavBtn.index(e.target)].images.webp);
-        })
-    })
-})
+  changePerson(crewBtn1, "0");
+  changePerson(crewBtn2, "-100%");
+  changePerson(crewBtn3, "-200%");
+  changePerson(crewBtn4, "-300%");
+});
