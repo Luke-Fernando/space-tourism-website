@@ -9,10 +9,8 @@
 }
 
 .logo-container {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -79,7 +77,6 @@
 .nav-item {
   list-style: none;
   max-width: 100%;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   height: 100%;
@@ -113,10 +110,8 @@
 }
 
 .hamburger-btn-container {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   display: none;
@@ -131,7 +126,6 @@
   .nav-link {
     font-size: 14px;
   }
-
   .nav-link-num {
     font-size: 16px;
   }
@@ -150,7 +144,6 @@
   .navbar-decoration-line {
     display: none;
   }
-
   .nav-link {
     letter-spacing: 2.36px;
   }
@@ -160,12 +153,10 @@
     width: 90%;
     align-self: center;
   }
-
   .logo {
     width: 40px;
     height: 40px;
   }
-
   .navbar-container {
     max-width: 67%;
     width: 67%;
@@ -176,41 +167,32 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     align-self: flex-start;
     justify-content: flex-start;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     max-height: 50%;
   }
-
   .nav-item {
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     margin-bottom: 2.5rem;
   }
-
   .nav-link {
     font-size: 16px;
   }
-
   .nav-link-num {
     display: inline-block;
   }
-
   .active-nav-link {
     border-bottom: 3px solid transparent;
   }
-
   .hamburger-btn-container {
     display: inline-block;
   }
-
   .res-navbar-close-btn-container {
     display: flex;
     align-self: flex-end;

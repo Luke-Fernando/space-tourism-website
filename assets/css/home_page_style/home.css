@@ -152,23 +152,19 @@
     width: 420px;
     height: 420px;
   }
-
   .explore-btn {
     width: 242px;
     height: 242px;
   }
-
   .explore-btn-hover {
     position: absolute;
     width: 242px;
     height: 242px;
   }
-
   .main-entry-text {
     font-size: 20px;
     letter-spacing: 3.38px;
   }
-
   .main-para-text {
     font-size: 16px;
     line-height: 28px;
@@ -185,23 +181,18 @@
     justify-content: space-around;
     align-items: center;
   }
-
   .main-texts-container {
     margin: 0 0 0 0;
   }
-
   .main-entry-text {
     text-align: center;
   }
-
   .main-topic-text {
     text-align: center;
   }
-
   .main-para-text {
     text-align: center;
   }
-
   .explore-btn-container {
     width: 300px;
     height: 300px;
@@ -211,7 +202,6 @@
     width: 300px;
     height: 300px;
   }
-
   .main-texts-container {
     height: 334px;
     display: flex;
@@ -228,11 +218,9 @@
   .main-entry-text {
     font-size: 16px;
   }
-
   .main-topic-text {
     font-size: 80px;
   }
-
   .explore-btn-container {
     width: 200px;
     height: 200px;
@@ -242,18 +230,15 @@
     width: 200px;
     height: 200px;
   }
-
   .explore-btn {
     width: 150px;
     height: 150px;
   }
-
   .explore-btn-hover {
     position: absolute;
     width: 150px;
     height: 150px;
   }
-
   .explore-btn-text {
     font-size: 20px;
   }

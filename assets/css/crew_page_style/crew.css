@@ -78,7 +78,7 @@
 
 .crew-topic-num {
   padding-right: 2rem;
-  color: rgba(255, 255, 255, 0.253);
+  color: hsla(0, 0%, 100%, 0.253);
   font-weight: 700;
 }
 
@@ -91,7 +91,7 @@
   font-weight: 400;
   font-size: 32px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
   padding: 0;
 }
 
@@ -143,19 +143,15 @@
   .crew-member-name {
     font-size: 40px;
   }
-
   .crew-topic {
     font-size: 20px;
   }
-
   .profesion {
     font-size: 24px;
   }
-
   .crew-member-details {
     font-size: 16px;
   }
-
   .crew-nav-btn {
     width: 10px;
     height: 10px;
@@ -166,38 +162,31 @@
     grid-column: 1/21;
     grid-row: 2/3;
   }
-
   .crew-text-details-container {
     grid-row: 4/11;
     grid-column: 4/18;
   }
-
   .profesion {
     text-align: center;
     margin: 0;
   }
-
   .crew-member-name {
     text-align: center;
     margin: 0;
   }
-
   .crew-member-details {
     text-align: center;
     margin: 0;
     padding: 0;
   }
-
   .crew-nav-container {
     grid-column: 9/13;
     grid-row: 11/12;
   }
-
   .crew-person-image-container {
     grid-row: 12/21;
     grid-column: 1/21;
   }
-
   .crew-person-image {
     max-width: 456px;
     height: 100%;
@@ -207,11 +196,9 @@
   .profesion {
     font-size: 18px;
   }
-
   .crew-member-name {
     font-size: 24px;
   }
-
   .crew-member-details {
     font-size: 15px;
   }
@@ -220,22 +207,18 @@
   .crew-main-topic-container {
     justify-content: center;
   }
-
   .crew-topic {
     font-size: 16px;
     letter-spacing: 2.7px;
   }
-
   .crew-text-details-container {
     grid-row: 13/20;
     grid-column: 1/21;
   }
-
   .crew-nav-container {
     grid-column: 8/14;
     grid-row: 11/12;
   }
-
   .crew-person-image-container {
     grid-row: 4/11;
     grid-column: 1/21;
