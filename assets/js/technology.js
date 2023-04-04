@@ -1,29 +1,52 @@
 $(document).ready(() => {
+  const techDetails = $(".tech-details-texts");
+  const techImags = $(".tech-image");
+  const techBtns = $(".tech-nav-btn");
+  const techBtn1 = $(".tech-btn-1");
+  const techBtn2 = $(".tech-btn-2");
+  const techBtn3 = $(".tech-btn-3");
+  var screenWidth = $(window).width();
 
-    const techNavBtnGuard = $(".tech-nav-btn-guard");
-    const techTopic = $(".tech-details-topic");
-    const techPara = $(".tech-details-para");
-    const techImg = $(".tech-image");
+  console.log(screenWidth);
 
-
-    techNavBtnGuard.click(e => {
-        $(e.target).parent().addClass("tech-nav-btn-active");
-        techNavBtnGuard.not(e.target).parent().removeClass("tech-nav-btn-active");
-        $.get("https://competent-ptolemy-d4ab42.netlify.app/db.json", data => {
-            techTopic.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].name);
-            techPara.text(data.technology[$(e.target).index(".tech-nav-btn-guard")].description);
-            if ($(window).width() > 815) {
-                techImg.attr("src", data.technology[$(e.target).index(".tech-nav-btn-guard")].images.portrait);
-            } else {
-                techImg.attr("src", data.technology[$(e.target).index(".tech-nav-btn-guard")].images.landscape)
-            }
-        })
+  function detectScreenWidth() {
+    $(window).resize(function () {
+      screenWidth = $(this).width();
+      console.log(screenWidth);
     });
-    $(window).resize(() => {
-        if ($(window).width() < 815) {
-            techImg.attr("src", "./assets/technology/image-launch-vehicle-landscape.jpg")
-        } else {
-            techImg.attr("src", "./assets/technology/image-launch-vehicle-portrait.jpg")
-        }
-    })
-})
+  }
+
+  detectScreenWidth();
+
+  function bigScreenData(position) {
+    techDetails.each(function () {
+      $(this).css("top", position);
+    });
+  }
+
+  function smallScreenData(position) {
+    techDetails.each(function () {
+      $(this).css("top", "0");
+      $(this).css("left", position);
+    });
+  }
+
+  function changeDetails(clickedBtn, position) {
+    clickedBtn.click(function () {
+      if (screenWidth > 815) {
+        $(this).css("left", "0");
+        bigScreenData(position);
+      } else {
+        smallScreenData(position);
+      }
+      $(this).addClass("tech-nav-btn-active");
+      techBtns.not(this).each(function () {
+        $(this).removeClass("tech-nav-btn-active");
+      });
+    });
+  }
+
+  changeDetails(techBtn1, "0");
+  changeDetails(techBtn2, "-100%");
+  changeDetails(techBtn3, "-200%");
+});

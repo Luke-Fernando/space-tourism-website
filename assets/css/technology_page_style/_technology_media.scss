@@ -58,8 +58,12 @@
   .tech-details-texts-container {
     margin-top: 0.5rem;
     width: 100%;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    // justify-content: flex;
+  }
+  .tech-details-texts {
+    align-items: center;
   }
   .tech-details-sub-topic {
     margin: 0.5rem 0 0.5rem 0;
