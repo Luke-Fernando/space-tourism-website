@@ -22,11 +22,17 @@ $(document).ready(() => {
     techDetails.each(function () {
       $(this).css("top", position);
     });
+    techImags.each(function () {
+      $(this).css("left", position);
+    });
   }
 
   function smallScreenData(position) {
     techDetails.each(function () {
       $(this).css("top", "0");
+      $(this).css("left", position);
+    });
+    techImags.each(function () {
       $(this).css("left", position);
     });
   }
@@ -35,7 +41,7 @@ $(document).ready(() => {
     clickedBtn.click(function () {
       if (screenWidth > 815) {
         $(this).css("left", "0");
-        bigScreenData(position);
+        smallScreenData(position);
       } else {
         smallScreenData(position);
       }

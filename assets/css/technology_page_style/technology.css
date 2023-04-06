@@ -32,19 +32,30 @@
 }
 .main-content-container {
   width: 100%;
-  height: 85vh;
+  height: auto;
   max-height: 750px;
   min-height: 700px;
   margin-top: auto;
   margin-bottom: auto;
-  display: grid;
-  grid-template-columns: repeat(27, 1fr);
-  grid-template-rows: repeat(25, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-content-sub-container {
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-topic-container {
-  grid-column: 4/28;
-  grid-row: 2/3;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -61,37 +72,53 @@
 }
 
 .topic-num {
-  margin-right: 1rem;
+  margin: 0 1rem 0 0;
   font-weight: 700;
   opacity: 0.25;
 }
 
-.tech-details-container {
-  grid-column: 4/16;
-  grid-row: 7/19;
+.tech-details-main-container {
+  height: auto;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.tech-image-container {
-  grid-column: 18/28;
-  grid-row: 3/23;
+.tech-details-container {
+  width: calc(100% - 550px);
+  height: auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.tech-image-container {
+  width: 530px;
+  aspect-ratio: 515/527;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .tech-image {
   width: 100%;
+  min-width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .tech-nav-btns-container {
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: -moz-max-content;
-  width: max-content;
-  height: 85%;
+  margin-right: 20px;
 }
 
 .tech-nav-btn {
@@ -106,6 +133,7 @@
   position: relative;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+  margin: 3px 0;
 }
 .tech-nav-btn:hover {
   border: 1px solid rgb(255, 255, 255);
@@ -139,27 +167,26 @@
 }
 
 .tech-details-texts-container {
-  height: 85%;
-  width: 80%;
+  flex: 1;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start !important;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
 }
 
 .tech-details-texts {
   width: 100%;
   min-width: 100%;
-  height: 100%;
-  min-height: 100%;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
   transition: all ease-in-out 100ms;
+  position: relative;
   left: 0;
   top: 0;
 }
@@ -181,7 +208,7 @@
   font-size: 56px;
   color: #ffffff;
   text-transform: uppercase;
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -195,14 +222,6 @@
   padding: 0;
 }
 
-@media (max-width: 1325px) {
-  .tech-details-container {
-    grid-column: 2/16;
-  }
-  .main-topic-container {
-    grid-column: 2/28;
-  }
-}
 @media (max-width: 1135px) {
   .main-topic {
     font-size: 25px;
@@ -212,9 +231,6 @@
   }
   .tech-details-para {
     font-size: 16px;
-  }
-  .tech-image-container {
-    grid-column: 17/28;
   }
   .tech-nav-btn {
     width: 70px;
@@ -236,20 +252,11 @@
     line-height: 28px;
   }
 }
-@media (max-width: 975px) {
-  .tech-image-container {
-    grid-row: 5/21;
-  }
-}
 @media (max-width: 815px) {
   .tech-image-container {
-    grid-column: 1/28;
-    grid-row: 4/13;
     justify-content: center;
   }
   .tech-details-container {
-    grid-column: 5/24;
-    grid-row: 14/25;
     flex-direction: column;
   }
   .tech-details-texts-container {
@@ -283,19 +290,10 @@
 }
 @media (max-width: 600px) {
   .main-topic-container {
-    grid-row: 1/2;
     justify-content: center;
   }
   .tech-nav-btns-container {
     width: 70%;
-  }
-  .tech-details-container {
-    grid-column: 3/26;
-    grid-row: 13/25;
-  }
-  .tech-image-container {
-    grid-column: 1/28;
-    grid-row: 3/12;
   }
 }
 @media (max-width: 430px) {
