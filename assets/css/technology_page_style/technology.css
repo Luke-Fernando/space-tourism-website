@@ -30,10 +30,14 @@
     background-image: url("../../technology/background-technology-mobile.jpg");
   }
 }
+.tech-container {
+  height: auto;
+  justify-content: flex-start;
+}
+
 .main-content-container {
   width: 100%;
   height: auto;
-  max-height: 750px;
   min-height: 700px;
   margin-top: auto;
   margin-bottom: auto;
@@ -45,7 +49,7 @@
 
 .main-content-sub-container {
   max-width: 1300px;
-  width: 100%;
+  width: 96%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -232,6 +236,9 @@
   .tech-details-para {
     font-size: 16px;
   }
+  .tech-image-container {
+    width: 500px;
+  }
   .tech-nav-btn {
     width: 70px;
     height: 70px;
@@ -252,54 +259,59 @@
     line-height: 28px;
   }
 }
-@media (max-width: 815px) {
+@media (max-width: 1024px) {
+  .main-topic-container {
+    width: 96%;
+  }
+  .main-content-sub-container {
+    width: 100%;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    align-items: flex-end;
+  }
+  .tech-details-main-container {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
   .tech-image-container {
-    justify-content: center;
+    width: 100%;
+    aspect-ratio: 384/155;
   }
   .tech-details-container {
+    width: 92%;
     flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
   }
   .tech-details-texts-container {
-    margin-top: 0.5rem;
     width: 100%;
-    flex-direction: row;
-    align-items: center;
+    margin-top: 20px;
   }
   .tech-details-texts {
+    justify-content: center;
     align-items: center;
-  }
-  .tech-details-sub-topic {
-    margin: 0.5rem 0 0.5rem 0;
-  }
-  .tech-details-topic {
-    margin-bottom: 1rem;
   }
   .tech-details-para {
     text-align: center;
   }
   .tech-nav-btns-container {
     flex-direction: row;
-    width: 50%;
     height: -moz-max-content;
     height: max-content;
+    width: 100%;
+    max-width: 250px;
+    justify-content: space-between;
+    align-items: center;
   }
+}
+@media (max-width: 815px) {
   .tech-nav-btn {
     width: 60px;
     height: 60px;
   }
 }
-@media (max-width: 600px) {
-  .main-topic-container {
-    justify-content: center;
-  }
-  .tech-nav-btns-container {
-    width: 70%;
-  }
-}
 @media (max-width: 430px) {
-  .tech-nav-btns-container {
-    width: 50%;
-  }
   .main-topic {
     font-size: 16px;
   }

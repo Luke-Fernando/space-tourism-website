@@ -1,6 +1,9 @@
 $(document).ready(() => {
   const techDetails = $(".tech-details-texts");
   const techImags = $(".tech-image");
+  const techImg1 = $(".tech-img-1");
+  const techImg2 = $(".tech-img-2");
+  const techImg3 = $(".tech-img-3");
   const techBtns = $(".tech-nav-btn");
   const techBtn1 = $(".tech-btn-1");
   const techBtn2 = $(".tech-btn-2");
@@ -52,7 +55,35 @@ $(document).ready(() => {
     });
   }
 
+  function changeTechImg() {
+    if (screenWidth <= 1024) {
+      techImg1.attr(
+        "src",
+        "./assets/technology/image-launch-vehicle-landscape.jpg"
+      );
+      techImg2.attr("src", "./assets/technology/image-spaceport-landscape.jpg");
+      techImg3.attr(
+        "src",
+        "./assets/technology/image-space-capsule-landscape.jpg"
+      );
+    } else {
+      techImg1.attr(
+        "src",
+        "./assets/technology/image-launch-vehicle-portrait.jpg"
+      );
+      techImg2.attr("src", "./assets/technology/image-spaceport-portrait.jpg");
+      techImg3.attr(
+        "src",
+        "./assets/technology/image-space-capsule-portrait.jpg"
+      );
+    }
+  }
+
   changeDetails(techBtn1, "0");
   changeDetails(techBtn2, "-100%");
   changeDetails(techBtn3, "-200%");
+  changeTechImg();
+  $(window).resize(function () {
+    changeTechImg();
+  });
 });
